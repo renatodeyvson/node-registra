@@ -1,0 +1,25 @@
+{
+  "name": "registra",
+  "version": "1.0.0",
+  "description": "A log module, easy to set up, using console, file or db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatodeyvson/node-registra.git"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "renatodeyvson <renatodeyvson@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatodeyvson/node-registra/issues"
+  },
+  "homepage": "https://github.com/renatodeyvson/node-registra#readme",
+  "dependencies": {
+    "mssql": "^4.1.0"
+  }
+}
