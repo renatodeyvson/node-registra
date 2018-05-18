@@ -2,7 +2,7 @@ const registra = require('../index');
 
 registra.logOn({db:true});
 
-//registra.setFsPath('/test/');
+registra.setFsPath(__dirname+'/log-test/');
 
 registra.setDb({
     user: 'user name',

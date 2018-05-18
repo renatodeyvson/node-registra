@@ -1,6 +1,6 @@
 {
   "name": "registra",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A log module, easy to set up, using console, file or db",
   "main": "index.js",
   "scripts": {

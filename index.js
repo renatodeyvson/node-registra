@@ -22,7 +22,7 @@ exports.logOn = (newConfig) => {
 };
 
 exports.setFsPath = (path) => {
-    if(typeof path == 'string') config.path = __dirname+path;
+    if(typeof path == 'string') config.path = path;
 };
 
 exports.setDb = (db) => {

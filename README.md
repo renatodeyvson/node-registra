@@ -27,7 +27,7 @@ registra.log('Hello, registra!');
 registra.logOn({db:true});
 
 //setting where write log file
-registra.setFsPath('/test/');
+registra.setFsPath(__dirname+'/test/');
 
 //db credentials
 registra.setDb({
