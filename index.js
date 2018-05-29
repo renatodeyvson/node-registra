@@ -4,12 +4,7 @@ const fs = require('fs'),
     mssql = require('mssql');
 
 let config = require('./config'),
-    configDb = require('./configDb');
-
-/*
-    TODOs
-        remove MOBC credentials
-*/
+    configDb = {};
 
 /*******************************
 *            CONFIG            *
@@ -41,7 +36,7 @@ exports.setDefaultProcedure = (procedure) => {
 *            PUT LOG           *
 ********************************/
 
-exports.log = (log, onlyDb) => {
+exports.log = (log, logOn) => {
 
     //get date and fix time zone
     let date = new Date();
@@ -52,9 +47,15 @@ exports.log = (log, onlyDb) => {
         if(typeof log == 'object') log = JSON.stringify(log);
 
         //write log (if enabled)
-        if(!onlyDb && config.console) print(log);
-        if(!onlyDb && config.fs) saveLogFile(date, log);
-        if(onlyDb && config.db) return execProcedure(log);
+        if(logOn){
+            if(logOn.console) print(log);
+            if(logOn.fs) saveLogFile(date, log);
+            if(logOn.db) return execProcedure(log);
+        } else {
+            if(config.console) print(log);
+            if(config.fs) saveLogFile(date, log);
+            if(config.db) return execProcedure(log);
+        }
 
     } catch(err){
         //try log failure

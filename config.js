@@ -1,6 +1,6 @@
 module.exports = {
-    console:true,
-    fs:true,
-    db:false,
+    console: false,
+    fs: false,
+    db: false,
     path: __dirname+'/logs/'
 };
